@@ -4,13 +4,15 @@
     padding: 0;
     margin: 0;
     border: 0;
-    height: 100%;
+    height: min-content;
     box-sizing: border-box;
 }
 
 html {
     font-family: Roboto;
-    font-size: 2vh;
+    font-size: 1.8vh;
+    color: #2f3640;
+    line-height: 1.5em;
 }
 
 a {
@@ -18,9 +20,94 @@ a {
     text-decoration: none;
 }
 
+p {
+    margin: 0 0 0.75em 1em;
+}
+
 span {
     padding-left: 1vh;
     padding-right: 1vh;
-    height: min-content;
     width: max-content;
+}
+
+body {
+    display: grid;
+}
+
+.section {
+    display: grid;
+    padding: 3em;
+}
+
+header {
+    display: grid;
+    grid-template-areas:
+        'logo navbar';
+    align-items: center;
+}
+
+.logo,
+.nav__links {
+    display: grid;
+    margin: 3vh;
+}
+
+.logo {
+    grid-area: logo;
+    font-size: 6vh;
+}
+
+.nav__links {
+    grid-area: navbar;
+    grid-template-columns: repeat(4, max-content);
+    justify-content: right;
+}
+
+.main {
+    display: grid;
+    grid-template-areas:
+        'hero'
+        'about'
+        'projects'
+        'contacts';
+}
+
+.hero {
+    padding: 6em !important;
+    display: grid;
+    grid-template-areas:
+        'firstname'
+        'secondname'
+        'profession';
+    gap: 5em;
+}
+
+.about {}
+
+.projects {
+    border: 1px blue solid;
+}
+
+.contacts {
+    border: 1px yellow solid;
+}
+
+.firstname,
+.secondname {
+    font-size: 6em;
+    font-weight: 300;
+}
+
+.secondname {
+    text-indent: 11.3vh;
+}
+
+.profession {
+    font-size: 4em;
+    text-indent: 18vh;
+}
+
+.section__name {
+    padding-bottom: 1em;
+    font-size: 4.8vh;
 }
