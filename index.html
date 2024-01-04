@@ -1,11 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
 <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
+
 <body>
-    
+    <header>
+        <a aria-label="home" class="logo">
+            <span aria-hidden="true">VS</span>
+        </a>
+
+        <nav class="nav__links">
+            <a href="link-wrapper">
+                <div class="nav__link" aria-label="Домой">
+                    <span aria-hidden="true">Домой</span>
+                </div>
+            </a>
+            <a href="link-wrapper">
+                <div class="nav__link" aria-label="Обо мне">
+                    <span aria-hidden="true">Обо мне</span>
+                </div>
+            </a>
+            <a href="link-wrapper">
+                <div class="nav__link" aria-label="Проекты">
+                    <span aria-hidden="true">Проекты</span>
+                </div>
+            </a>
+            <a href="link-wrapper">
+                <div class="nav__link" aria-label="Контакты">
+                    <span aria-hidden="true">Контакты</span>
+                </div>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section hero">
+            <span class="firstname">Вадим</span>
+            <span class="secondname">Ситников</span>
+            <span class="profession">WEB-developer</span>
+        </section>
+
+        <section class="section about" aria-label="Обо мне" tabindex="0">
+            <span class="section__name" aria-hidden="true">1.Обо мне</span>
+            <p class="about__paragraph" tabindex="0">Привет! Меня зовут Вадим и я начинающий веб-разработчик.</p>
+            <p class="about__paragraph" tabindex="0">Моя мечта - стать мастером в этом деле, поэтому я приступил к
+                обучению на замечательном ресурсе The Odin Project и теперь создаю и улучшаю собственную
+                страничку-портфолио.</p>
+            <p class="about__paragraph" tabindex="0">Спасибо за внимание!</p>
+        </section>
+
+        <section class="section projects" aria-label="Проекты" tabindex="0">
+            <span class="section__name" aria-hidden="true">2.Проекты</span>
+        </section>
+
+        <section class="section contacts" aria-label="Контакты" tabindex="0">
+            <span class="section__name" aria-hidden="true">3.Контакты</span>
+        </section>
+    </main>
+    <footer>
+        <span>© Copyright 2024, Vadim Sitnikov</span>
+        <span>My portfolio is open source</span>
+    </footer>
 </body>
+
 </html>
