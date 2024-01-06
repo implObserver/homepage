@@ -20,8 +20,16 @@ a {
     text-decoration: none;
 }
 
+h3 {
+    margin: 0 0 2em 0.75em;
+}
+
 p {
     margin: 0 0 0.75em 1em;
+}
+
+ul {
+    padding-left: 4em;
 }
 
 span {
@@ -82,14 +90,14 @@ header {
     gap: 5em;
 }
 
-.about {}
-
 .projects {
-    border: 1px blue solid;
+    display: grid;
+    gap: 3em;
+   
 }
 
 .contacts {
-    border: 1px yellow solid;
+    
 }
 
 .firstname,
@@ -110,4 +118,25 @@ header {
 .section__name {
     padding-bottom: 1em;
     font-size: 4.8vh;
+}
+
+.project {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+    align-items:start;
+}
+
+.preview {
+    display: grid;
+    width: min-content;
+    border: 1px grey solid;
+}
+
+img{
+    display: grid;
+}
+
+.description {
+    display: grid;
 }

@@ -39,13 +39,13 @@
 
     <main>
         <section class="section hero">
-            <span class="firstname">Вадим</span>
-            <span class="secondname">Ситников</span>
-            <span class="profession">WEB-developer</span>
+            <h1 class="firstname">Вадим</h1>
+            <h1 class="secondname">Ситников</h1>
+            <h1 class="profession">WEB-developer</h1>
         </section>
 
         <section class="section about" aria-label="Обо мне" tabindex="0">
-            <span class="section__name" aria-hidden="true">1.Обо мне</span>
+            <h2 class="section__name" aria-hidden="true">1.Обо мне</h2>
             <p class="about__paragraph" tabindex="0">Привет! Меня зовут Вадим и я начинающий веб-разработчик.</p>
             <p class="about__paragraph" tabindex="0">Моя мечта - стать мастером в этом деле, поэтому я приступил к
                 обучению на замечательном ресурсе The Odin Project и теперь создаю и улучшаю собственную
@@ -54,11 +54,114 @@
         </section>
 
         <section class="section projects" aria-label="Проекты" tabindex="0">
-            <span class="section__name" aria-hidden="true">2.Проекты</span>
+            <h2 class="section__name" aria-hidden="true">2.Проекты</h2>
+
+            <section class="project" aria-label="Крестики-нолики" tabindex="0">
+                <div class="preview">
+                    <picture>
+                        <img sizes="(max-width: 480px) 100vw, 480px" srcset="
+                        ../src/views/images/ticTacToe_d4up0s/ticTacToe_d4up0s_c_scale,w_50.png 50w,
+                        ../src/views/images/ticTacToe_d4up0s/ticTacToe_d4up0s_c_scale,w_480.png 480w"
+                            src="../src/views/images/ticTacToe_d4up0s/ticTacToe_d4up0s_c_scale,w_480.png" alt="">
+                    </picture>
+                </div>
+                <div class="description">
+                    <h3 class="tictactoe__paragraph" aria-hidden="true">Крестики-нолики</h3>
+                    <p class="tictactoe__paragraph" tabindex="0">Параметры:</p>
+                    <ul tabindex="0">
+                        <li>Оффлайн</li>
+                        <li>До 4 игроков</li>
+                        <li>Присутствует непобедимый min-max алгоритм</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="project" aria-label="Морской бой" tabindex="0">
+                <div class="preview">
+                    <picture>
+                        <img sizes="(max-width: 480px) 100vw, 480px" srcset="
+                        ../src/views/images/battleShip_bbl1ub/battleShip_bbl1ub_c_scale,w_50.png 50w,
+                        ../src/views/images/battleShip_bbl1ub/battleShip_bbl1ub_c_scale,w_370.png 370w,
+                        ../src/views/images/battleShip_bbl1ub/battleShip_bbl1ub_c_scale,w_480.png 480w"
+                            src="../src/views/images/battleShip_bbl1ub/battleShip_bbl1ub_c_scale,w_480.png" alt="">
+                    </picture>
+                </div>
+                <div class="description">
+                    <h3 class="tictactoe__paragraph" aria-hidden="true">Морской бой</h3>
+                    <p class="tictactoe__paragraph" tabindex="0">Параметры:</p>
+                    <ul tabindex="0">
+                        <li>Оффлайн</li>
+                        <li>2 игрока</li>
+                        <li>Формат классический, русский</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="project" aria-label="Путь конем" tabindex="0">
+                <div class="preview">
+                    <picture>
+                        <img sizes="(max-width: 480px) 100vw, 480px" srcset="
+                        ../src/views/images/knightTravelers_qukfuc/knightTravelers_qukfuc_c_scale,w_50.png 50w,
+                        ../src/views/images/knightTravelers_qukfuc/knightTravelers_qukfuc_c_scale,w_480.png 480w"
+                            src="../src/views/images/knightTravelers_qukfuc/knightTravelers_qukfuc_c_scale,w_480.png"
+                            alt="">
+                    </picture>
+                </div>
+                <div class="description">
+                    <h3 class="tictactoe__paragraph" aria-hidden="true">Путь конем</h3>
+                    <p class="tictactoe__paragraph" tabindex="0">Визуализация алгоритма, который выстраивает кратчайший
+                        путь конем из произвольных пунктов А и Б.</p>
+                    <p class="tictactoe__paragraph" tabindex="0">При построении пути применяется граф</p>
+                </div>
+            </section>
+
+            <section class="project" aria-label="Записная книжка" tabindex="0">
+                <div class="preview">
+                    <picture>
+                        <img sizes="(max-width: 480px) 100vw, 480px" srcset="
+                        ../src/views/images/TODO-Manager_m4wiff/TODO-Manager_m4wiff_c_scale,w_50.png 50w,
+                        ../src/views/images/TODO-Manager_m4wiff/TODO-Manager_m4wiff_c_scale,w_480.png 480w"
+                            src="../src/views/images/TODO-Manager_m4wiff/TODO-Manager_m4wiff_c_scale,w_480.png" alt="">
+                    </picture>
+                </div>
+                <div class="description">
+                    <h3 class="tictactoe__paragraph" aria-hidden="true">Записная книжка</h3>
+                    <p class="tictactoe__paragraph" tabindex="0">Примитивная имитация файловой системы внутри
+                        веб-браузера. Можно создавать структуры папок и текстовых записей.</p>
+                    <p class="tictactoe__paragraph" tabindex="0">Для хранения данных применяется localStorage</p>
+                </div>
+            </section>
+
+            <section class="project" aria-label="Прогноз погоды" tabindex="0">
+                <div class="preview">
+                    <picture>
+                        <img sizes="(max-width: 480px) 100vw, 480px" srcset="
+                        ../src/views/images/WeatherApp_exrbpf/WeatherApp_exrbpf_c_scale,w_50.png 50w,
+                        ../src/views/images/WeatherApp_exrbpf/WeatherApp_exrbpf_c_scale,w_142.png 142w,
+                        ../src/views/images/WeatherApp_exrbpf/WeatherApp_exrbpf_c_scale,w_209.png 209w,
+                        ../src/views/images/WeatherApp_exrbpf/WeatherApp_exrbpf_c_scale,w_258.png 258w,
+                        ../src/views/images/WeatherApp_exrbpf/WeatherApp_exrbpf_c_scale,w_303.png 303w,
+                        ../src/views/images/WeatherApp_exrbpf/WeatherApp_exrbpf_c_scale,w_340.png 340w,
+                        ../src/views/images/WeatherApp_exrbpf/WeatherApp_exrbpf_c_scale,w_377.png 377w,
+                        ../src/views/images/WeatherApp_exrbpf/WeatherApp_exrbpf_c_scale,w_409.png 409w,
+                        ../src/views/images/WeatherApp_exrbpf/WeatherApp_exrbpf_c_scale,w_439.png 439w,
+                        ../src/views/images/WeatherApp_exrbpf/WeatherApp_exrbpf_c_scale,w_469.png 469w,
+                        ../src/views/images/WeatherApp_exrbpf/WeatherApp_exrbpf_c_scale,w_480.png 480w"
+                            src="../src/views/images/WeatherApp_exrbpf/WeatherApp_exrbpf_c_scale,w_480.png" alt="">
+                    </picture>
+                </div>
+                <div class="description">
+                    <h3 class="tictactoe__paragraph" aria-hidden="true">Прогноз погоды</h3>
+                    <p class="tictactoe__paragraph" tabindex="0">Веб-страничка, которая позволяет получить прогноз
+                        погоды для какого-нибудь города.</p>
+                    <p class="tictactoe__paragraph" tabindex="0">В проекте применяется 2 API, одно для получения
+                        информации о погоде, другое для обновления фоновых изображений на странице.</p>
+                </div>
+            </section>
         </section>
 
         <section class="section contacts" aria-label="Контакты" tabindex="0">
-            <span class="section__name" aria-hidden="true">3.Контакты</span>
+            <h2 class="section__name" aria-hidden="true">3.Контакты</h2>
         </section>
     </main>
     <footer>
@@ -68,3 +171,74 @@
 </body>
 
 </html>
+
+
+<!-- BattleShip 
+<picture>
+<img
+sizes="(max-width: 480px) 100vw, 480px"
+srcset="
+battleShip_bbl1ub_c_scale,w_50.png 50w,
+battleShip_bbl1ub_c_scale,w_370.png 370w,
+battleShip_bbl1ub_c_scale,w_480.png 480w"
+src="battleShip_bbl1ub_c_scale,w_480.png"
+alt="">
+</picture>
+-->
+
+<!-- KnightTravelers
+<picture>
+<img
+sizes="(max-width: 480px) 100vw, 480px"
+srcset="
+knightTravelers_qukfuc_c_scale,w_50.png 50w,
+knightTravelers_qukfuc_c_scale,w_480.png 480w"
+src="knightTravelers_qukfuc_c_scale,w_480.png"
+alt="">
+</picture>
+-->
+
+<!-- TicTacToe
+<picture>
+<img
+sizes="(max-width: 480px) 100vw, 480px"
+srcset="
+ticTacToe_d4up0s_c_scale,w_50.png 50w,
+ticTacToe_d4up0s_c_scale,w_480.png 480w"
+src="ticTacToe_d4up0s_c_scale,w_480.png"
+alt="">
+</picture>
+-->
+
+<!-- TODO-Manager
+<picture>
+<img
+sizes="(max-width: 480px) 100vw, 480px"
+srcset="
+TODO-Manager_m4wiff_c_scale,w_50.png 50w,
+TODO-Manager_m4wiff_c_scale,w_480.png 480w"
+src="TODO-Manager_m4wiff_c_scale,w_480.png"
+alt="">
+</picture>
+-->
+
+<!-- WetherApp
+<picture>
+<img
+sizes="(max-width: 480px) 100vw, 480px"
+srcset="
+WeatherApp_exrbpf_c_scale,w_50.png 50w,
+WeatherApp_exrbpf_c_scale,w_142.png 142w,
+WeatherApp_exrbpf_c_scale,w_209.png 209w,
+WeatherApp_exrbpf_c_scale,w_258.png 258w,
+WeatherApp_exrbpf_c_scale,w_303.png 303w,
+WeatherApp_exrbpf_c_scale,w_340.png 340w,
+WeatherApp_exrbpf_c_scale,w_377.png 377w,
+WeatherApp_exrbpf_c_scale,w_409.png 409w,
+WeatherApp_exrbpf_c_scale,w_439.png 439w,
+WeatherApp_exrbpf_c_scale,w_469.png 469w,
+WeatherApp_exrbpf_c_scale,w_480.png 480w"
+src="WeatherApp_exrbpf_c_scale,w_480.png"
+alt="">
+</picture>
+-->
