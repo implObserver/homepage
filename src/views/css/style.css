@@ -90,15 +90,17 @@ header {
     gap: 5em;
 }
 
+.about {
+    display: grid;
+}
+
 .projects {
     display: grid;
     gap: 3em;
-   
+
 }
 
-.contacts {
-    
-}
+.contacts {}
 
 .firstname,
 .secondname {
@@ -124,7 +126,7 @@ header {
     display: grid;
     justify-content: space-between;
     grid-template-columns: 1fr 1fr;
-    align-items:start;
+    align-items: start;
 }
 
 .preview {
@@ -133,10 +135,62 @@ header {
     border: 1px grey solid;
 }
 
-img{
+img {
     display: grid;
 }
 
 .description {
     display: grid;
+}
+
+.skills-panel {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    align-items: center;
+    justify-self: center;
+    margin-top: 2rem;
+}
+
+.arrow {
+    background-color: white;
+}
+
+.arrow:hover {
+    fill: aqua;
+}
+
+.carousel {
+    display: grid;
+    position: relative;
+    width: 59vh;
+    padding: 1vh 4vh;
+    border-radius: 1vh;
+    justify-self: center;
+    overflow: hidden;
+}
+
+.gallery {
+    display: grid;
+    position: relative;
+    width: 500vw;
+    right: 17.5vh;
+}
+
+.gallery ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 15vh);
+    align-content: center;
+    list-style: none;
+    width: inherit;
+}
+
+.gallery li {
+    display: grid;
+    padding: 2vh;
+    align-content: center;
+    width: 12vh;
+    grid-template-rows: min-content min-content;
+    justify-content: center;
+    justify-items: center;
+    gap: 1vh;
 }

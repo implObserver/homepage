@@ -39,24 +39,110 @@
 
     <main>
         <section class="section hero">
-            <span class="firstname">Вадим</span>
-            <span class="secondname">Ситников</span>
-            <span class="profession">WEB-developer</span>
+            <h1 class="firstname">Вадим</h1>
+            <h1 class="secondname">Ситников</h1>
+            <h1 class="profession">WEB-developer</h1>
         </section>
 
         <section class="section about" aria-label="Обо мне" tabindex="0">
-            <span class="section__name" aria-hidden="true">1.Обо мне</span>
+            <h2 class="section__name" aria-hidden="true">1.Обо мне</h2>
             <p class="about__paragraph" tabindex="0">Привет! Меня зовут Вадим и я начинающий веб-разработчик.</p>
             <p class="about__paragraph" tabindex="0">Моя мечта - стать мастером в этом деле, поэтому я приступил к
                 обучению на замечательном ресурсе The Odin Project и теперь создаю и улучшаю собственную
                 страничку-портфолио.</p>
             <p class="about__paragraph" tabindex="0">Спасибо за внимание!</p>
+
+            <div class="skills-panel">
+                <button class="arrow prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh" viewBox="0 0 64 64" id="arrow">
+                        <path fill="#134563" d="M37.9 46 24.1 32.3l13.8-13.7 2 2-11.8 11.7L39.9 44l-2 2"></path>
+                    </svg>
+                </button>
+                <div class="carousel">
+                    <div class="gallery">
+                        <ul class="skills">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh"
+                                    preserveAspectRatio="xMinYMin meet" viewBox="0 0 256 256" id="javascript">
+                                    <path fill="#F7DF1E" d="M0 0h256v256H0V0z"></path>
+                                    <path
+                                        d="M67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371 7.905 0 12.89-3.092 12.89-15.12v-81.798h24.057v82.138c0 24.917-14.606 36.259-35.916 36.259-19.245 0-30.416-9.967-36.087-21.996M152.381 211.354l19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607 9.969 0 16.325-4.984 16.325-11.858 0-8.248-6.53-11.17-17.528-15.98l-6.013-2.58c-17.357-7.387-28.87-16.667-28.87-36.257 0-18.044 13.747-31.792 35.228-31.792 15.294 0 26.292 5.328 34.196 19.247L210.29 147.43c-4.125-7.389-8.591-10.31-15.465-10.31-7.046 0-11.514 4.468-11.514 10.31 0 7.217 4.468 10.14 14.778 14.608l6.014 2.577c20.45 8.765 31.963 17.7 31.963 37.804 0 21.654-17.012 33.51-39.867 33.51-22.339 0-36.774-10.654-43.819-24.574">
+                                    </path>
+                                </svg>
+                                <span>JavaScript</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh" viewBox="0 0 24 24"
+                                    id="html">
+                                    <path fill="#E44D26"
+                                        d="M3.345 21.601 1.419 0h21.162l-1.928 21.597L11.987 24l-8.642-2.399z"></path>
+                                    <path fill="#F16529" d="m12 22.164 7.003-1.941L20.65 1.766H12v20.398z"></path>
+                                    <path fill="#EBEBEB"
+                                        d="M12 9.778H8.494l-.242-2.713H12V4.416H5.357l.063.71.651 7.301H12V9.778zm0 6.88-.012.003-2.95-.797-.189-2.113H6.19l.371 4.16 5.427 1.506.012-.003v-2.756z">
+                                    </path>
+                                    <path fill="#FFF"
+                                        d="M11.991 9.778v2.649h3.262l-.308 3.436-2.955.797v2.756l5.431-1.505.04-.448.623-6.975.065-.711h-.714l-5.444.001zm0-5.362v2.649h6.399l.053-.596.121-1.343.063-.711-6.636.001z">
+                                    </path>
+                                </svg>
+                                <span>HTML</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh" viewBox="0 0 16 16"
+                                    id="css">
+                                    <path fill="#2196F3" d="m1 0 1.275 14.4L8 16l5.723-1.599L15 0z"></path>
+                                    <path fill="#FAFAFA"
+                                        d="m12.274 4.709-.161 1.809-.486 5.423L8 12.944l-.003.001-3.625-1.004-.253-2.836h1.776l.132 1.471 1.971.532.001-.001 1.974-.532.269-2.451-6.208.017-.176-1.676 6.533-.077.132-1.794-6.84.019-.115-1.669h8.864z">
+                                    </path>
+                                </svg>
+                                <span>CSS</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh" viewBox="0 0 128 128"
+                                    id="git">
+                                    <path fill="#F34F29"
+                                        d="M124.742 58.378l-55.117-55.114c-3.172-3.174-8.32-3.174-11.497 0l-11.443 11.446 14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.462 6.607 2.293 9.993l13.992 13.994c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679-3.78 3.78-9.901 3.78-13.683 0-2.842-2.844-3.545-7.019-2.105-10.521l-13.048-13.049-.002 34.341c.922.455 1.791 1.063 2.559 1.828 3.779 3.777 3.779 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-4.088-9.905-.311-13.683.934-.933 1.855-1.638 2.855-2.11v-34.659c-1-.472-1.92-1.172-2.856-2.111-2.861-2.86-3.396-7.06-1.928-10.576l-14.233-14.313-37.754 37.79c-3.175 3.177-3.155 8.325.02 11.5l55.126 55.114c3.173 3.174 8.325 3.174 11.503 0l54.86-54.858c3.175-3.176 3.178-8.327.004-11.501z">
+                                    </path>
+                                </svg>
+                                <span>Git</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh" viewBox="0 0 128 128"
+                                    id="npm">
+                                    <path fill="#cb3837"
+                                        d="M2,38.5H126V82.21H64V89.5H36.44V82.21H2ZM8.89,74.93H22.67V53.07h6.89V74.93h6.89V45.79H8.89ZM43.33,45.79V82.21H57.11V74.93H70.89V45.79Zm13.78,7.29H64V67.64H57.11Zm20.67-7.29V74.93H91.56V53.07h6.89V74.93h6.89V53.07h6.89V74.93h6.89V45.79Z">
+                                    </path>
+                                </svg>
+                                <span>NPM</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh" viewBox="0 0 128 128"
+                                    id="webpack">
+                                    <path fill="#8ed6fb"
+                                        d="M117.29,98.1,66.24,127V104.49L98,87,117.29,98.1Zm3.5-3.16V34.55L102.11,45.35V84.16l18.67,10.77ZM10.71,98.1l51,28.88V104.49L29.94,87Zm-3.5-3.16V34.55L25.89,45.35V84.16Zm2.19-64.3L61.76,1V22.76L28.21,41.21l-.27.15Zm109.18,0L66.24,1V22.76L99.79,41.2l.27.15,18.54-10.71Z">
+                                    </path>
+                                    <path fill="#1c78c0"
+                                        d="M61.76,99.37,30.37,82.1V47.92L61.76,66Zm4.48,0L97.63,82.12V47.92L66.24,66ZM32.5,44,64,26.66,95.5,44,64,62.16,32.5,44Z">
+                                    </path>
+                                </svg>
+                                <span>Webpack</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="arrow next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh" enable-background="new 0 0 64 64" viewBox="0 0 64 64"
+                        id="arrow">
+                        <path fill="#134563" d="m-210.9-289-2-2 11.8-11.7-11.8-11.7 2-2 13.8 13.7-13.8 13.7"
+                            transform="translate(237 335)"></path>
+                    </svg>
+                </button>
+            </div>
         </section>
 
         <section class="section projects" aria-label="Проекты" tabindex="0">
-            <span class="section__name" aria-hidden="true">2.Проекты</span>
+            <h2 class="section__name" aria-hidden="true">2.Проекты</h2>
 
-            <section class="project">
+            <section class="project" aria-label="Крестики-нолики" tabindex="0">
                 <div class="preview">
                     <picture>
                         <img sizes="(max-width: 480px) 100vw, 480px" srcset="
@@ -66,13 +152,17 @@
                     </picture>
                 </div>
                 <div class="description">
-                    <p class="tictactoe__paragraph" tabindex="0">Крестики-нолики</p>
-                    <p class="tictactoe__paragraph" tabindex="0">Учебная работа с целью развить и закрепить навыки. В проекте используются звуки и анимации</p>
+                    <h3 class="tictactoe__paragraph" aria-hidden="true">Крестики-нолики</h3>
+                    <p class="tictactoe__paragraph" tabindex="0">Параметры:</p>
+                    <ul tabindex="0">
+                        <li>Оффлайн</li>
+                        <li>До 4 игроков</li>
+                        <li>Присутствует непобедимый min-max алгоритм</li>
+                    </ul>
                 </div>
             </section>
 
-            <section class="project">
-                <div class="description"></div>
+            <section class="project" aria-label="Морской бой" tabindex="0">
                 <div class="preview">
                     <picture>
                         <img sizes="(max-width: 480px) 100vw, 480px" srcset="
@@ -82,9 +172,18 @@
                             src="758c3d53ccdf618edf8c.png" alt="">
                     </picture>
                 </div>
+                <div class="description">
+                    <h3 class="tictactoe__paragraph" aria-hidden="true">Морской бой</h3>
+                    <p class="tictactoe__paragraph" tabindex="0">Параметры:</p>
+                    <ul tabindex="0">
+                        <li>Оффлайн</li>
+                        <li>2 игрока</li>
+                        <li>Формат классический, русский</li>
+                    </ul>
+                </div>
             </section>
 
-            <section class="project">
+            <section class="project" aria-label="Путь конем" tabindex="0">
                 <div class="preview">
                     <picture>
                         <img sizes="(max-width: 480px) 100vw, 480px" srcset="
@@ -94,11 +193,15 @@
                             alt="">
                     </picture>
                 </div>
-                <div class="description"></div>
+                <div class="description">
+                    <h3 class="tictactoe__paragraph" aria-hidden="true">Путь конем</h3>
+                    <p class="tictactoe__paragraph" tabindex="0">Визуализация алгоритма, который выстраивает кратчайший
+                        путь конем из произвольных пунктов А и Б.</p>
+                    <p class="tictactoe__paragraph" tabindex="0">При построении пути применяется граф</p>
+                </div>
             </section>
 
-            <section class="project">
-                <div class="description"></div>
+            <section class="project" aria-label="Записная книжка" tabindex="0">
                 <div class="preview">
                     <picture>
                         <img sizes="(max-width: 480px) 100vw, 480px" srcset="
@@ -107,9 +210,15 @@
                             src="981d418cf8e0870f2702.png" alt="">
                     </picture>
                 </div>
+                <div class="description">
+                    <h3 class="tictactoe__paragraph" aria-hidden="true">Записная книжка</h3>
+                    <p class="tictactoe__paragraph" tabindex="0">Примитивная имитация файловой системы внутри
+                        веб-браузера. Можно создавать структуры папок и текстовых записей.</p>
+                    <p class="tictactoe__paragraph" tabindex="0">Для хранения данных применяется localStorage</p>
+                </div>
             </section>
 
-            <section class="project">
+            <section class="project" aria-label="Прогноз погоды" tabindex="0">
                 <div class="preview">
                     <picture>
                         <img sizes="(max-width: 480px) 100vw, 480px" srcset="
@@ -123,15 +232,22 @@
                         4a6100667443fcef2990.png 409w,
                         e1afb3ae1ab76823c9f7.png 439w,
                         49c98d5ecd60b9e06222.png 469w,
-                        f8406fe96b1c610e5c76.png 480w" src="f8406fe96b1c610e5c76.png" alt="">
+                        f8406fe96b1c610e5c76.png 480w"
+                            src="f8406fe96b1c610e5c76.png" alt="">
                     </picture>
                 </div>
-                <div class="description"></div>
+                <div class="description">
+                    <h3 class="tictactoe__paragraph" aria-hidden="true">Прогноз погоды</h3>
+                    <p class="tictactoe__paragraph" tabindex="0">Веб-страничка, которая позволяет получить прогноз
+                        погоды для какого-нибудь города.</p>
+                    <p class="tictactoe__paragraph" tabindex="0">В проекте применяется 2 API, одно для получения
+                        информации о погоде, другое для обновления фоновых изображений на странице.</p>
+                </div>
             </section>
         </section>
 
         <section class="section contacts" aria-label="Контакты" tabindex="0">
-            <span class="section__name" aria-hidden="true">3.Контакты</span>
+            <h2 class="section__name" aria-hidden="true">3.Контакты</h2>
         </section>
     </main>
     <footer>
