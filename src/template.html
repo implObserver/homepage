@@ -52,8 +52,8 @@
                 страничку-портфолио.</p>
             <p class="about__paragraph" tabindex="0">Спасибо за внимание!</p>
 
-            <div class="skills-panel">
-                <button class="arrow prev">
+            <section class="skills-panel" aria-label="Мой стек технологий" tabindex="0">
+                <button aria-hidden="true" class="arrow prev" tabindex="-1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh" viewBox="0 0 64 64" id="arrow">
                         <path fill="#134563" d="M37.9 46 24.1 32.3l13.8-13.7 2 2-11.8 11.7L39.9 44l-2 2"></path>
                     </svg>
@@ -61,7 +61,7 @@
                 <div class="carousel">
                     <div class="gallery">
                         <ul class="skills">
-                            <li>
+                            <li aria-label="JavaScript" tabindex="0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh"
                                     preserveAspectRatio="xMinYMin meet" viewBox="0 0 256 256" id="javascript">
                                     <path fill="#F7DF1E" d="M0 0h256v256H0V0z"></path>
@@ -71,7 +71,7 @@
                                 </svg>
                                 <span>JavaScript</span>
                             </li>
-                            <li>
+                            <li aria-label="HTML 5" tabindex="0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh" viewBox="0 0 24 24"
                                     id="html">
                                     <path fill="#E44D26"
@@ -86,7 +86,7 @@
                                 </svg>
                                 <span>HTML</span>
                             </li>
-                            <li>
+                            <li aria-label="CSS 3" tabindex="0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh" viewBox="0 0 16 16"
                                     id="css">
                                     <path fill="#2196F3" d="m1 0 1.275 14.4L8 16l5.723-1.599L15 0z"></path>
@@ -96,7 +96,7 @@
                                 </svg>
                                 <span>CSS</span>
                             </li>
-                            <li>
+                            <li aria-label="Git" tabindex="0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh" viewBox="0 0 128 128"
                                     id="git">
                                     <path fill="#F34F29"
@@ -105,7 +105,7 @@
                                 </svg>
                                 <span>Git</span>
                             </li>
-                            <li>
+                            <li aria-label="Node Packet Manager" tabindex="0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh" viewBox="0 0 128 128"
                                     id="npm">
                                     <path fill="#cb3837"
@@ -114,7 +114,7 @@
                                 </svg>
                                 <span>NPM</span>
                             </li>
-                            <li>
+                            <li aria-label="Webpack" tabindex="0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh" viewBox="0 0 128 128"
                                     id="webpack">
                                     <path fill="#8ed6fb"
@@ -129,14 +129,14 @@
                         </ul>
                     </div>
                 </div>
-                <button class="arrow next">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh" enable-background="new 0 0 64 64" viewBox="0 0 64 64"
-                        id="arrow">
+                <button aria-hidden="true" class="arrow next" tabindex="-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10vh" height="10vh" enable-background="new 0 0 64 64"
+                        viewBox="0 0 64 64" id="arrow">
                         <path fill="#134563" d="m-210.9-289-2-2 11.8-11.7-11.8-11.7 2-2 13.8 13.7-13.8 13.7"
                             transform="translate(237 335)"></path>
                     </svg>
                 </button>
-            </div>
+            </section>
         </section>
 
         <section class="section projects" aria-label="Проекты" tabindex="0">
@@ -248,6 +248,10 @@
 
         <section class="section contacts" aria-label="Контакты" tabindex="0">
             <h2 class="section__name" aria-hidden="true">3.Контакты</h2>
+            <section class="contacts__panel">
+                <section class="gitHub"></section>
+                <section class="mail"></section>
+            </section>
         </section>
     </main>
     <footer>

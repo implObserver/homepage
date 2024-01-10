@@ -1,65 +1,45 @@
-export const Carousel = () => {
+import { timeout } from "../helper/helper";
+import { leftTransition, removeTransitionLeftButton, removeTransitionRightButton, rightTransition, setTransitionLeftButton, setTransitionRightButton } from "../views/nodes/stylePresets/carousel";
+
+export const Carousel = async () => {
     let wrapper = document.querySelector('.gallery');
     let carousel = document.querySelector('.gallery ul');
     let skills = Array.from(carousel.querySelectorAll('li'));
-    console.log(skills)
 
-    const left = () => {
-        skills.unshift(skills[skills.length - 1]);
-        skills.pop();
-        wrapper.style.transition = '';
-        carousel.style.transition = '';
-
-        wrapper.style.right = '32.5vh';
+    const left = async () => {
+        leftTransition();
+        leftMarkup();
         fill();
-        setTimeout(() => {
-            leftAnimation()
-        }, 100);
     }
 
-    const right = () => {
-        rightAnimation()
-
-        setTimeout(() => {
-            skills[skills.length] = skills[0];
-            skills.shift();
-            wrapper.style.transition = '';
-            carousel.style.transition = '';
-
-            wrapper.style.right = '17.5vh';
-
-            fill();
-        }, 600);
+    const right = async () => {
+        await rightTransition();
+        rightMarkUp();
+        fill();
     }
 
-    const fill = () => {
+    const fill = async () => {
         while (carousel.lastElementChild) {
             carousel.removeChild(carousel.lastElementChild);
         }
-
         skills.forEach(skill => {
-            console.log(skills)
             carousel.appendChild(skill);
         })
     }
 
-    const leftAnimation = () => {
-        wrapper.style.transition = 'all 500ms ease-out';
-        carousel.style.transition = 'all 500ms ease-out';
-
-        wrapper.style.right = '';
+    const leftMarkup = async () => {
+        skills.unshift(skills[skills.length - 1]);
+        skills.pop();
     }
 
-    const rightAnimation = () => {
-        wrapper.style.transition = 'all 500ms ease-out';
-        carousel.style.transition = 'all 500ms ease-out';
-
-        wrapper.style.right = '32.5vh';
+    const rightMarkUp = async () => {
+        skills[skills.length] = skills[0];
+        skills.shift();
     }
 
     const getNode = () => {
         return wrapper;
     }
 
-    return { left, right, fill, getNode, leftAnimation };
+    return { left, right, fill, getNode };
 }
