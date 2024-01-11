@@ -15,7 +15,7 @@ export const rightTransition = async () => {
 
 export const leftTransition = async () => {
     removeTransitionLeftButton();
-    await timeout(0.01);
+    await timeout(1);
     setTransitionLeftButton();
 }
 

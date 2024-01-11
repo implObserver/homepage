@@ -63,6 +63,30 @@ header {
 .logo {
     grid-area: logo;
     font-size: 6vh;
+    grid-template-columns: min-content min-content;
+}
+
+.logo>span {
+    width: min-content;
+    padding-left: 0vh;
+    padding-right: 0vh;
+}
+
+.first__letter {
+    position: relative;
+    transform-style: preserve-3d;
+    animation: cubeRotate 10s linear infinite;
+}
+
+@keyframes cubeRotate {
+    0%, 40%   {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+    60%, 100% {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
 }
 
 .nav__links {
@@ -71,13 +95,18 @@ header {
     justify-content: right;
 }
 
-.main {
+main {
     display: grid;
     grid-template-areas:
         'hero'
         'about'
         'projects'
         'contacts';
+    background-image: url(../images/white.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
 }
 
 .hero {
@@ -88,19 +117,42 @@ header {
         'secondname'
         'profession';
     gap: 5em;
+    overflow: hidden;
 }
 
 .about {
+    margin: 1rem;
     display: grid;
+    border: 1vh #2f3640 solid;
+    background-color: white;
+    opacity: 0;
 }
 
 .projects {
     display: grid;
     gap: 3em;
-
+    opacity: 0;
 }
 
-.contacts {}
+.contacts {
+    border: 1px grey solid;
+    opacity: 0;
+}
+
+.firstname,
+.secondname,
+.profession {
+    display: grid;
+    width: max-content;
+    transform: translate(100vw);
+    opacity: 0;
+}
+
+.show__hero {
+    transform: translate(0vw);
+    opacity: 1;
+    transition: transform 1s ease-in-out, opacity 1.6s ease-in-out;
+}
 
 .firstname,
 .secondname {
@@ -127,12 +179,15 @@ header {
     justify-content: space-between;
     grid-template-columns: 1fr 1fr;
     align-items: start;
+    border: 1vh #2f3640 solid;
+    padding: 1vh;
+    align-items: center;
+    background-color: white;
 }
 
 .preview {
     display: grid;
     width: min-content;
-    border: 1px grey solid;
 }
 
 img {
@@ -141,6 +196,7 @@ img {
 
 .description {
     display: grid;
+    padding: 1vh;
 }
 
 .skills-panel {
@@ -182,6 +238,7 @@ img {
     align-content: center;
     list-style: none;
     width: inherit;
+    border: 1px #2f3640 solid;
 }
 
 .gallery li {
@@ -193,4 +250,29 @@ img {
     justify-content: center;
     justify-items: center;
     gap: 1vh;
+}
+
+.contacts__panel {
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: min-content min-content;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.hero,
+.projects {}
+
+.visible__main {
+    background-image: url(../images/WaveLineBackgroundFree.jpg);
+    transition: background-image 0.8s ease-in-out;
+}
+
+.visible__section {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+footer {
+    opacity: 0;
 }
