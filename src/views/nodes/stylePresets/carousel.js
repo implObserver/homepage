@@ -22,7 +22,7 @@ export const leftTransition = async () => {
 export const removeTransitionLeftButton = async () => {
     wrapper.style.transition = '';
     carousel.style.transition = '';
-    wrapper.style.right = '32.5vh';
+    wrapper.style.right = 'min(32.5vh,32.5vw)';
 }
 
 export const setTransitionLeftButton = async () => {
@@ -34,13 +34,13 @@ export const setTransitionLeftButton = async () => {
 export const removeTransitionRightButton = async () => {
     wrapper.style.transition = '';
     carousel.style.transition = '';
-    wrapper.style.right = '17.5vh';
+    wrapper.style.right = 'min(17.5vh,17.5vw)';
 }
 
 export const setTransitionRightButton = async () => {
     wrapper.style.transition = `all ${animationSpeed}ms ease-out`;
     carousel.style.transition = `all ${animationSpeed}ms ease-out`;
-    wrapper.style.right = '32.5vh';
+    wrapper.style.right = 'min(32.5vh,32.5vw)';
 }
 
 export const removeArrowsPointerEvents = async () => {

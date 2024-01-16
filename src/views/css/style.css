@@ -10,9 +10,21 @@
 
 html {
     font-family: Roboto;
-    font-size: 1.8vh;
+    font-size: min(1.8vh, 1.8vw);
     color: #2f3640;
     line-height: 1.5em;
+
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    min-height: 240px;
+    min-width: 80px;
+}
+
+html::-webkit-scrollbar {
+    visibility: hidden;
+    width: 0;
 }
 
 a {
@@ -33,18 +45,15 @@ ul {
 }
 
 span {
-    padding-left: 1vh;
-    padding-right: 1vh;
-    width: max-content;
+    padding-left: min(1vh, 1vw);
+    padding-right: min(1vh, 1vw);
 }
 
-body {
-    display: grid;
-}
+body {}
 
 .section {
     display: grid;
-    padding: 3em;
+    padding: min(3vh, 7.5vw);
 }
 
 header {
@@ -52,17 +61,20 @@ header {
     grid-template-areas:
         'logo navbar';
     align-items: center;
+    justify-content: space-between;
+    opacity: 0;
 }
 
 .logo,
 .nav__links {
     display: grid;
-    margin: 3vh;
+    margin: min(3vh, 3vw);
+    width: max-content;
 }
 
 .logo {
     grid-area: logo;
-    font-size: 6vh;
+    font-size: min(6vh, 6vw);
     grid-template-columns: min-content min-content;
 }
 
@@ -79,11 +91,15 @@ header {
 }
 
 @keyframes cubeRotate {
-    0%, 40%   {
+
+    0%,
+    40% {
         -webkit-transform: rotateY(360deg);
         transform: rotateY(360deg);
     }
-    60%, 100% {
+
+    60%,
+    100% {
         -webkit-transform: rotateY(0deg);
         transform: rotateY(0deg);
     }
@@ -92,7 +108,7 @@ header {
 .nav__links {
     grid-area: navbar;
     grid-template-columns: repeat(4, max-content);
-    justify-content: right;
+    font-size: 1rem;
 }
 
 main {
@@ -107,36 +123,18 @@ main {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
+    padding: min(1vh, 1vw);
 }
 
 .hero {
-    padding: 6em !important;
+    padding: min(6em) !important;
     display: grid;
     grid-template-areas:
         'firstname'
         'secondname'
         'profession';
-    gap: 5em;
+    gap: min(12.5vh, 12.5vw);
     overflow: hidden;
-}
-
-.about {
-    margin: 1rem;
-    display: grid;
-    border: 1vh #2f3640 solid;
-    background-color: white;
-    opacity: 0;
-}
-
-.projects {
-    display: grid;
-    gap: 3em;
-    opacity: 0;
-}
-
-.contacts {
-    border: 1px grey solid;
-    opacity: 0;
 }
 
 .firstname,
@@ -146,57 +144,34 @@ main {
     width: max-content;
     transform: translate(100vw);
     opacity: 0;
-}
-
-.show__hero {
-    transform: translate(0vw);
-    opacity: 1;
-    transition: transform 1s ease-in-out, opacity 1.6s ease-in-out;
+    padding-right: min(1vh, 1vw);
 }
 
 .firstname,
 .secondname {
-    font-size: 6em;
+    font-size: min(6em);
     font-weight: 300;
 }
 
 .secondname {
-    text-indent: 11.3vh;
+    text-indent: min(11.3vh, 11.3vw);
 }
 
 .profession {
-    font-size: 4em;
-    text-indent: 18vh;
+    font-size: min(4em);
+    text-indent: min(18vh, 18vw);
 }
 
 .section__name {
     padding-bottom: 1em;
-    font-size: 4.8vh;
+    font-size: min(4.8vh, 4.8vw);
 }
 
-.project {
+.about {
     display: grid;
-    justify-content: space-between;
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-    border: 1vh #2f3640 solid;
-    padding: 1vh;
-    align-items: center;
+    border: min(1vh, 1vw) #2f3640 solid;
     background-color: white;
-}
-
-.preview {
-    display: grid;
-    width: min-content;
-}
-
-img {
-    display: grid;
-}
-
-.description {
-    display: grid;
-    padding: 1vh;
+    opacity: 0;
 }
 
 .skills-panel {
@@ -218,9 +193,9 @@ img {
 .carousel {
     display: grid;
     position: relative;
-    width: 59vh;
-    padding: 1vh 4vh;
-    border-radius: 1vh;
+    width: min(59vh, 59vw);
+    padding: min(4vh, 4vw);
+    border-radius: min(1vh, 1vw);
     justify-self: center;
     overflow: hidden;
 }
@@ -229,12 +204,12 @@ img {
     display: grid;
     position: relative;
     width: 500vw;
-    right: 17.5vh;
+    right: min(17.5vh, 17.5vw);
 }
 
 .gallery ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 15vh);
+    grid-template-columns: repeat(auto-fit, min(15vh, 15vw));
     align-content: center;
     list-style: none;
     width: inherit;
@@ -243,13 +218,47 @@ img {
 
 .gallery li {
     display: grid;
-    padding: 2vh;
+    padding: min(2vh, 1vw);
     align-content: center;
-    width: 12vh;
+    width: min(12vh, 12vw);
     grid-template-rows: min-content min-content;
     justify-content: center;
     justify-items: center;
-    gap: 1vh;
+    gap: min(1vh, 1vw);
+    font-size: min(2.5vh, 2.5vw);
+}
+
+.projects {
+    display: grid;
+    row-gap: 3em;
+    align-content: center;
+    opacity: 0;
+}
+
+.project {
+    display: grid;
+    border: min(1vh, 1vw) #2f3640 solid;
+    background-color: white;
+    padding: min(1vh, 1vw);
+}
+
+.preview {
+    display: grid;
+    width: min-content;
+}
+
+img {
+    display: grid;
+}
+
+.description {
+    display: grid;
+    padding: min(1vh, 1vw);
+}
+
+.contacts {
+    border: 1px grey solid;
+    opacity: 0;
 }
 
 .contacts__panel {
@@ -260,12 +269,62 @@ img {
     gap: 3rem;
 }
 
-.hero,
-.projects {}
+.mail {}
+
+.github {}
+
+footer {
+    display: grid;
+    opacity: 0;
+}
+
+.verticalLine {
+    display: grid;
+}
+
+@media screen and (min-aspect-ratio: 0.9/1) {
+    .project {
+        justify-content: space-between;
+        align-items: center;
+        grid-template-columns: 1fr min-content 1fr;
+    }
+
+    .verticalLine {
+        width: 1vh;
+        height: 75%;
+        border-right: 1px solid #2f3640;
+    }
+}
+
+@media screen and (max-aspect-ratio: 0.9/1) {
+    .project {
+        justify-items: center;
+        grid-template-rows: repeat(3, min-content);
+    }
+
+    .preview {
+        display: grid;
+        width: min-content;
+    }
+
+    .verticalLine {
+        width: 75%;
+        height: 0;
+        padding-top: 1vw;
+        border-bottom: 1px solid #2f3640;
+        justify-self: center;
+    }
+
+    .description {
+        display: grid;
+        padding: 1vw;
+    }
+
+}
 
 .visible__main {
     background-image: url(../images/WaveLineBackgroundFree.jpg);
-    transition: background-image 0.8s ease-in-out;
+    transition: background-image 4s ease-in-out;
 }
 
 .visible__section {
@@ -273,6 +332,8 @@ img {
     transition: opacity 0.5s ease-in-out;
 }
 
-footer {
-    opacity: 0;
+.show__hero {
+    transform: translate(0vw);
+    opacity: 1;
+    transition: transform 1s ease-in-out, opacity 1.6s ease-in-out;
 }
