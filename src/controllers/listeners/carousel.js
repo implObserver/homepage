@@ -6,7 +6,7 @@ export const setEventListenersForCarousel = async () => {
     const getInterval = () => {
         return setInterval(() => {
             changeArrowsAvailability();
-            //carousel.right();
+            carousel.right();
         }, 3000);
     }
 
@@ -15,14 +15,14 @@ export const setEventListenersForCarousel = async () => {
     leftButton.addEventListener('click', async () => {
         clearInterval(interval);
         changeArrowsAvailability();
-        //carousel.left()
+        carousel.left()
         interval = getInterval();
     })
 
     rightButton.addEventListener('click', async () => {
         clearInterval(interval);
         changeArrowsAvailability();
-        //carousel.right();
+        carousel.right();
         interval = getInterval();
     })
 }

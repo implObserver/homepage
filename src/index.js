@@ -15,6 +15,7 @@ const projects = document.querySelector('.projects');
 const contacts = document.querySelector('.contacts');
 const footer = document.querySelector('footer');
 
+document.querySelector('html').style.overflowY = 'hidden';
 await timeout(200);
 header.classList.add('visible__section');
 await timeout(100);
