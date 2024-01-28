@@ -147,45 +147,73 @@
                 <div class="preview">
                     <picture>
                         <img sizes="(max-width: 1318px) 50vw, min(1318px,40vw)" srcset="
-                        7d9f40071216d400f235.webp 50w,
-                        cd181c4d698680745e31.webp 905w,
-                        8a3b34f726ce34c9070d.webp 1318w"
+                            7d9f40071216d400f235.webp 50w,
+                            cd181c4d698680745e31.webp 905w,
+                            8a3b34f726ce34c9070d.webp 1318w"
                             src="8a3b34f726ce34c9070d.webp" alt="">
                     </picture>
                 </div>
                 <div class="verticalLine" aria-hidden="true"></div>
                 <div class="description">
-                    <h3 class="tictactoe__paragraph" aria-hidden="true">Крестики-нолики</h3>
-                    <p class="tictactoe__paragraph" tabindex="0">Параметры:</p>
-                    <ul tabindex="0">
-                        <li>Оффлайн</li>
-                        <li>До 4 игроков</li>
-                        <li>Присутствует непобедимый min-max алгоритм</li>
-                    </ul>
+                    <h3 class="name" aria-hidden="true">Крестики-нолики</h3>
+                    <section class="front__panel">
+                        <section class="info">
+                            <p class="paragraph" tabindex="0">Параметры:</p>
+                            <ul tabindex="0">
+                                <li>Оффлайн</li>
+                                <li>До 4 игроков</li>
+                                <li>Присутствует непобедимый min-max алгоритм</li>
+                            </ul>
+                        </section>
+                    </section>
+                    <section class="back__panel">
+                        <section class="ghost__info">
+                            <p class="paragraph" tabindex="0">Параметры:</p>
+                            <ul tabindex="0">
+                                <li>Оффлайн</li>
+                                <li>До 4 игроков</li>
+                                <li>Присутствует непобедимый min-max алгоритм</li>
+                            </ul>
+                        </section>
+                    </section>
                 </div>
             </section>
 
             <section class="project" aria-label="Морской бой" tabindex="0">
                 <div class="preview">
                     <picture>
-                        <img sizes="(max-width: 1318px) 50vw, min(1318px,40vw)" srcset="
-6b6208f577ba780e6d2e.webp 50w,
-6448d3d2a0566c90a0d5.webp 485w,
-55d03e757e2fd7e250c0.webp 750w,
-9a01efe7aa9005f0bae8.webp 1027w,
-17524e3c84ca802b3fee.webp 1318w"
+                        <img sizes="(max-width: 1318px) 50vw, max(40vh,40vw)" srcset="
+                            6b6208f577ba780e6d2e.webp 50w,
+                            6448d3d2a0566c90a0d5.webp 485w,
+                            55d03e757e2fd7e250c0.webp 750w,
+                            9a01efe7aa9005f0bae8.webp 1027w,
+                            17524e3c84ca802b3fee.webp 1318w"
                             src="17524e3c84ca802b3fee.webp" alt="">
                     </picture>
                 </div>
                 <div class="verticalLine" aria-hidden="true"></div>
                 <div class="description">
-                    <h3 class="tictactoe__paragraph" aria-hidden="true">Морской бой</h3>
-                    <p class="tictactoe__paragraph" tabindex="0">Параметры:</p>
-                    <ul tabindex="0">
-                        <li>Оффлайн</li>
-                        <li>2 игрока</li>
-                        <li>Формат классический, русский</li>
-                    </ul>
+                    <h3 class="name" aria-hidden="true">Морской бой</h3>
+                    <section class="front__panel">
+                        <section class="info">
+                            <p class="paragraph" tabindex="0">Параметры:</p>
+                            <ul tabindex="0">
+                                <li>Оффлайн</li>
+                                <li>2 игрока</li>
+                                <li>Формат классический, русский</li>
+                            </ul>
+                        </section>
+                    </section>
+                    <section class="back__panel">
+                        <section class="ghost__info">
+                            <p class="paragraph" tabindex="0">Параметры:</p>
+                            <ul tabindex="0">
+                                <li>Оффлайн</li>
+                                <li>2 игрока</li>
+                                <li>Формат классический, русский</li>
+                            </ul>
+                        </section>
+                    </section>
                 </div>
             </section>
 
@@ -203,10 +231,22 @@
                 </div>
                 <div class="verticalLine" aria-hidden="true"></div>
                 <div class="description">
-                    <h3 class="tictactoe__paragraph" aria-hidden="true">Путь конем</h3>
-                    <p class="tictactoe__paragraph" tabindex="0">Визуализация алгоритма, который выстраивает кратчайший
-                        путь конем из произвольных пунктов А и Б.</p>
-                    <p class="tictactoe__paragraph" tabindex="0">При построении пути применяется граф</p>
+                    <h3 class="name" aria-hidden="true">Путь конем</h3>
+                    <section class="front__panel"></section>
+                    <section class="front__panel">
+                        <section class="info">
+                            <p class="paragraph" tabindex="0">Визуализация алгоритма, который выстраивает кратчайший
+                                путь конем из произвольных пунктов А и Б.</p>
+                            <p class="paragraph" tabindex="0">При построении пути применяется граф</p>
+                        </section>
+                    </section>
+                    <section class="back__panel">
+                        <section class="ghost__info">
+                            <p class="paragraph" tabindex="0">Визуализация алгоритма, который выстраивает кратчайший
+                                путь конем из произвольных пунктов А и Б.</p>
+                            <p class="paragraph" tabindex="0">При построении пути применяется граф</p>
+                        </section>
+                    </section>
                 </div>
             </section>
 
@@ -214,20 +254,31 @@
                 <div class="preview">
                     <picture>
                         <img sizes="(max-width: 1318px) 50vw, min(1318px,40vw)" srcset="
-                        114aa83f61866d47294c.webp 50w,
-                        8647a342de52137a73d0.webp 697w,
-                        3563e5ec3a56c6942f27.webp 1160w,
-                        c7a98e721289552724d5.webp 1318w"
+                            114aa83f61866d47294c.webp 50w,
+                            8647a342de52137a73d0.webp 697w,
+                            3563e5ec3a56c6942f27.webp 1160w,
+                            c7a98e721289552724d5.webp 1318w"
                             src="c7a98e721289552724d5.webp"
                             alt="">
                     </picture>
                 </div>
                 <div class="verticalLine" aria-hidden="true"></div>
                 <div class="description">
-                    <h3 class="tictactoe__paragraph" aria-hidden="true">Записная книжка</h3>
-                    <p class="tictactoe__paragraph" tabindex="0">Примитивная имитация файловой системы внутри
-                        веб-браузера. Можно создавать структуры папок и текстовых записей.</p>
-                    <p class="tictactoe__paragraph" tabindex="0">Для хранения данных применяется localStorage</p>
+                    <h3 class="name" aria-hidden="true">Записная книжка</h3>
+                    <section class="front__panel">
+                        <section class="info">
+                            <p class="paragraph" tabindex="0">Примитивная имитация файловой системы внутри
+                                веб-браузера. Можно создавать структуры папок и текстовых записей.</p>
+                            <p class="paragraph" tabindex="0">Для хранения данных применяется localStorage</p>
+                        </section>
+                    </section>
+                    <section class="back__panel">
+                        <section class="ghost__info">
+                            <p class="paragraph" tabindex="0">Примитивная имитация файловой системы внутри
+                                веб-браузера. Можно создавать структуры папок и текстовых записей.</p>
+                            <p class="paragraph" tabindex="0">Для хранения данных применяется localStorage</p>
+                        </section>
+                    </section>
                 </div>
             </section>
 
@@ -235,27 +286,39 @@
                 <div class="preview">
                     <picture>
                         <img sizes="(max-width: 1318px) 50vw, min(1318px,40vw)" srcset="
-                        224d4fc579a9ba4b10ea.webp 50w,
-                        f8c2a7e46c8c414517f2.webp 269w,
-                        a5c49e05a1f304645459.webp 415w,
-                        39357eceb22f6cc0c89b.webp 549w,
-                        8b475b9a57ed7cf98c18.webp 655w,
-                        cab0ff83fabc6169f8fe.webp 688w,
-                        2e8d8f01db3ed962568e.webp 783w,
-                        8fd0fe1f0dd9f828f924.webp 902w,
-                        c6a2edcc26302dedf122.webp 1084w,
-                        357f2fac7e0f65a1e028.webp 1152w,
-                        f02d4e30471675a56472.webp 1318w"
+                            224d4fc579a9ba4b10ea.webp 50w,
+                            f8c2a7e46c8c414517f2.webp 269w,
+                            a5c49e05a1f304645459.webp 415w,
+                            39357eceb22f6cc0c89b.webp 549w,
+                            8b475b9a57ed7cf98c18.webp 655w,
+                            cab0ff83fabc6169f8fe.webp 688w,
+                            2e8d8f01db3ed962568e.webp 783w,
+                            8fd0fe1f0dd9f828f924.webp 902w,
+                            c6a2edcc26302dedf122.webp 1084w,
+                            357f2fac7e0f65a1e028.webp 1152w,
+                            f02d4e30471675a56472.webp 1318w"
                             src="f02d4e30471675a56472.webp" alt="">
                     </picture>
                 </div>
                 <div class="verticalLine" aria-hidden="true"></div>
                 <div class="description">
-                    <h3 class="tictactoe__paragraph" aria-hidden="true">Прогноз погоды</h3>
-                    <p class="tictactoe__paragraph" tabindex="0">Веб-страничка, которая позволяет получить прогноз
-                        погоды для какого-нибудь города.</p>
-                    <p class="tictactoe__paragraph" tabindex="0">В проекте применяется 2 API, одно для получения
-                        информации о погоде, другое для обновления фоновых изображений на странице.</p>
+                    <h3 class="name" aria-hidden="true">Прогноз погоды</h3>
+                    <section class="front__panel">
+                        <section class="info">
+                            <p class="paragraph" tabindex="0">Веб-страничка, которая позволяет получить прогноз
+                                погоды для какого-нибудь города.</p>
+                            <p class="paragraph" tabindex="0">В проекте применяется 2 API, одно для получения
+                                информации о погоде, другое для обновления фоновых изображений на странице.</p>
+                        </section>
+                    </section>
+                    <section class="back__panel">
+                        <section class="ghost__info">
+                            <p class="paragraph" tabindex="0">Веб-страничка, которая позволяет получить прогноз
+                                погоды для какого-нибудь города.</p>
+                            <p class="paragraph" tabindex="0">В проекте применяется 2 API, одно для получения
+                                информации о погоде, другое для обновления фоновых изображений на странице.</p>
+                        </section>
+                    </section>
                 </div>
             </section>
         </section>
