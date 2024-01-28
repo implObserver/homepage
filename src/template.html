@@ -147,45 +147,73 @@
                 <div class="preview">
                     <picture>
                         <img sizes="(max-width: 1318px) 50vw, min(1318px,40vw)" srcset="
-                        ../src/views/images/ticTacToe/ticTacToe_scale,w_50.webp 50w,
-                        ../src/views/images/ticTacToe/ticTacToe_scale,w_905.webp 905w,
-                        ../src/views/images/ticTacToe/ticTacToe_scale,w_1318.webp 1318w"
+                            ../src/views/images/ticTacToe/ticTacToe_scale,w_50.webp 50w,
+                            ../src/views/images/ticTacToe/ticTacToe_scale,w_905.webp 905w,
+                            ../src/views/images/ticTacToe/ticTacToe_scale,w_1318.webp 1318w"
                             src="../src/views/images/ticTacToe/ticTacToe_scale,w_1318.webp" alt="">
                     </picture>
                 </div>
                 <div class="verticalLine" aria-hidden="true"></div>
                 <div class="description">
-                    <h3 class="tictactoe__paragraph" aria-hidden="true">Крестики-нолики</h3>
-                    <p class="tictactoe__paragraph" tabindex="0">Параметры:</p>
-                    <ul tabindex="0">
-                        <li>Оффлайн</li>
-                        <li>До 4 игроков</li>
-                        <li>Присутствует непобедимый min-max алгоритм</li>
-                    </ul>
+                    <h3 class="name" aria-hidden="true">Крестики-нолики</h3>
+                    <section class="front__panel">
+                        <section class="info">
+                            <p class="paragraph" tabindex="0">Параметры:</p>
+                            <ul tabindex="0">
+                                <li>Оффлайн</li>
+                                <li>До 4 игроков</li>
+                                <li>Присутствует непобедимый min-max алгоритм</li>
+                            </ul>
+                        </section>
+                    </section>
+                    <section class="back__panel">
+                        <section class="ghost__info">
+                            <p class="paragraph" tabindex="0">Параметры:</p>
+                            <ul tabindex="0">
+                                <li>Оффлайн</li>
+                                <li>До 4 игроков</li>
+                                <li>Присутствует непобедимый min-max алгоритм</li>
+                            </ul>
+                        </section>
+                    </section>
                 </div>
             </section>
 
             <section class="project" aria-label="Морской бой" tabindex="0">
                 <div class="preview">
                     <picture>
-                        <img sizes="(max-width: 1318px) 50vw, min(1318px,40vw)" srcset="
-../src/views/images/battleShip_znkt60/battleShip_znkt60_c_scale,w_50.webp 50w,
-../src/views/images/battleShip_znkt60/battleShip_znkt60_c_scale,w_485.webp 485w,
-../src/views/images/battleShip_znkt60/battleShip_znkt60_c_scale,w_750.webp 750w,
-../src/views/images/battleShip_znkt60/battleShip_znkt60_c_scale,w_1027.webp 1027w,
-../src/views/images/battleShip_znkt60/battleShip_znkt60_c_scale,w_1318.webp 1318w"
+                        <img sizes="(max-width: 1318px) 50vw, max(40vh,40vw)" srcset="
+                            ../src/views/images/battleShip_znkt60/battleShip_znkt60_c_scale,w_50.webp 50w,
+                            ../src/views/images/battleShip_znkt60/battleShip_znkt60_c_scale,w_485.webp 485w,
+                            ../src/views/images/battleShip_znkt60/battleShip_znkt60_c_scale,w_750.webp 750w,
+                            ../src/views/images/battleShip_znkt60/battleShip_znkt60_c_scale,w_1027.webp 1027w,
+                            ../src/views/images/battleShip_znkt60/battleShip_znkt60_c_scale,w_1318.webp 1318w"
                             src="../src/views/images/battleShip_znkt60/battleShip_znkt60_c_scale,w_1318.webp" alt="">
                     </picture>
                 </div>
                 <div class="verticalLine" aria-hidden="true"></div>
                 <div class="description">
-                    <h3 class="tictactoe__paragraph" aria-hidden="true">Морской бой</h3>
-                    <p class="tictactoe__paragraph" tabindex="0">Параметры:</p>
-                    <ul tabindex="0">
-                        <li>Оффлайн</li>
-                        <li>2 игрока</li>
-                        <li>Формат классический, русский</li>
-                    </ul>
+                    <h3 class="name" aria-hidden="true">Морской бой</h3>
+                    <section class="front__panel">
+                        <section class="info">
+                            <p class="paragraph" tabindex="0">Параметры:</p>
+                            <ul tabindex="0">
+                                <li>Оффлайн</li>
+                                <li>2 игрока</li>
+                                <li>Формат классический, русский</li>
+                            </ul>
+                        </section>
+                    </section>
+                    <section class="back__panel">
+                        <section class="ghost__info">
+                            <p class="paragraph" tabindex="0">Параметры:</p>
+                            <ul tabindex="0">
+                                <li>Оффлайн</li>
+                                <li>2 игрока</li>
+                                <li>Формат классический, русский</li>
+                            </ul>
+                        </section>
+                    </section>
                 </div>
             </section>
 
@@ -203,10 +231,22 @@
                 </div>
                 <div class="verticalLine" aria-hidden="true"></div>
                 <div class="description">
-                    <h3 class="tictactoe__paragraph" aria-hidden="true">Путь конем</h3>
-                    <p class="tictactoe__paragraph" tabindex="0">Визуализация алгоритма, который выстраивает кратчайший
-                        путь конем из произвольных пунктов А и Б.</p>
-                    <p class="tictactoe__paragraph" tabindex="0">При построении пути применяется граф</p>
+                    <h3 class="name" aria-hidden="true">Путь конем</h3>
+                    <section class="front__panel"></section>
+                    <section class="front__panel">
+                        <section class="info">
+                            <p class="paragraph" tabindex="0">Визуализация алгоритма, который выстраивает кратчайший
+                                путь конем из произвольных пунктов А и Б.</p>
+                            <p class="paragraph" tabindex="0">При построении пути применяется граф</p>
+                        </section>
+                    </section>
+                    <section class="back__panel">
+                        <section class="ghost__info">
+                            <p class="paragraph" tabindex="0">Визуализация алгоритма, который выстраивает кратчайший
+                                путь конем из произвольных пунктов А и Б.</p>
+                            <p class="paragraph" tabindex="0">При построении пути применяется граф</p>
+                        </section>
+                    </section>
                 </div>
             </section>
 
@@ -214,20 +254,31 @@
                 <div class="preview">
                     <picture>
                         <img sizes="(max-width: 1318px) 50vw, min(1318px,40vw)" srcset="
-                        ../src/views/images/TODO-Manager_lj0ive/TODO-Manager_lj0ive_c_scale,w_50.webp 50w,
-                        ../src/views/images/TODO-Manager_lj0ive/TODO-Manager_lj0ive_c_scale,w_697.webp 697w,
-                        ../src/views/images/TODO-Manager_lj0ive/TODO-Manager_lj0ive_c_scale,w_1160.webp 1160w,
-                        ../src/views/images/TODO-Manager_lj0ive/TODO-Manager_lj0ive_c_scale,w_1318.webp 1318w"
+                            ../src/views/images/TODO-Manager_lj0ive/TODO-Manager_lj0ive_c_scale,w_50.webp 50w,
+                            ../src/views/images/TODO-Manager_lj0ive/TODO-Manager_lj0ive_c_scale,w_697.webp 697w,
+                            ../src/views/images/TODO-Manager_lj0ive/TODO-Manager_lj0ive_c_scale,w_1160.webp 1160w,
+                            ../src/views/images/TODO-Manager_lj0ive/TODO-Manager_lj0ive_c_scale,w_1318.webp 1318w"
                             src="../src/views/images/TODO-Manager_lj0ive/TODO-Manager_lj0ive_c_scale,w_1318.webp"
                             alt="">
                     </picture>
                 </div>
                 <div class="verticalLine" aria-hidden="true"></div>
                 <div class="description">
-                    <h3 class="tictactoe__paragraph" aria-hidden="true">Записная книжка</h3>
-                    <p class="tictactoe__paragraph" tabindex="0">Примитивная имитация файловой системы внутри
-                        веб-браузера. Можно создавать структуры папок и текстовых записей.</p>
-                    <p class="tictactoe__paragraph" tabindex="0">Для хранения данных применяется localStorage</p>
+                    <h3 class="name" aria-hidden="true">Записная книжка</h3>
+                    <section class="front__panel">
+                        <section class="info">
+                            <p class="paragraph" tabindex="0">Примитивная имитация файловой системы внутри
+                                веб-браузера. Можно создавать структуры папок и текстовых записей.</p>
+                            <p class="paragraph" tabindex="0">Для хранения данных применяется localStorage</p>
+                        </section>
+                    </section>
+                    <section class="back__panel">
+                        <section class="ghost__info">
+                            <p class="paragraph" tabindex="0">Примитивная имитация файловой системы внутри
+                                веб-браузера. Можно создавать структуры папок и текстовых записей.</p>
+                            <p class="paragraph" tabindex="0">Для хранения данных применяется localStorage</p>
+                        </section>
+                    </section>
                 </div>
             </section>
 
@@ -235,27 +286,39 @@
                 <div class="preview">
                     <picture>
                         <img sizes="(max-width: 1318px) 50vw, min(1318px,40vw)" srcset="
-                        ../src/views/images/WeatherApp_pqwqwj/WeatherApp_pqwqwj_c_scale,w_50.webp 50w,
-                        ../src/views/images/WeatherApp_pqwqwj/WeatherApp_pqwqwj_c_scale,w_269.webp 269w,
-                        ../src/views/images/WeatherApp_pqwqwj/WeatherApp_pqwqwj_c_scale,w_415.webp 415w,
-                        ../src/views/images/WeatherApp_pqwqwj/WeatherApp_pqwqwj_c_scale,w_549.webp 549w,
-                        ../src/views/images/WeatherApp_pqwqwj/WeatherApp_pqwqwj_c_scale,w_655.webp 655w,
-                        ../src/views/images/WeatherApp_pqwqwj/WeatherApp_pqwqwj_c_scale,w_688.webp 688w,
-                        ../src/views/images/WeatherApp_pqwqwj/WeatherApp_pqwqwj_c_scale,w_783.webp 783w,
-                        ../src/views/images/WeatherApp_pqwqwj/WeatherApp_pqwqwj_c_scale,w_902.webp 902w,
-                        ../src/views/images/WeatherApp_pqwqwj/WeatherApp_pqwqwj_c_scale,w_1084.webp 1084w,
-                        ../src/views/images/WeatherApp_pqwqwj/WeatherApp_pqwqwj_c_scale,w_1152.webp 1152w,
-                        ../src/views/images/WeatherApp_pqwqwj/WeatherApp_pqwqwj_c_scale,w_1318.webp 1318w"
+                            ../src/views/images/WeatherApp_pqwqwj/WeatherApp_pqwqwj_c_scale,w_50.webp 50w,
+                            ../src/views/images/WeatherApp_pqwqwj/WeatherApp_pqwqwj_c_scale,w_269.webp 269w,
+                            ../src/views/images/WeatherApp_pqwqwj/WeatherApp_pqwqwj_c_scale,w_415.webp 415w,
+                            ../src/views/images/WeatherApp_pqwqwj/WeatherApp_pqwqwj_c_scale,w_549.webp 549w,
+                            ../src/views/images/WeatherApp_pqwqwj/WeatherApp_pqwqwj_c_scale,w_655.webp 655w,
+                            ../src/views/images/WeatherApp_pqwqwj/WeatherApp_pqwqwj_c_scale,w_688.webp 688w,
+                            ../src/views/images/WeatherApp_pqwqwj/WeatherApp_pqwqwj_c_scale,w_783.webp 783w,
+                            ../src/views/images/WeatherApp_pqwqwj/WeatherApp_pqwqwj_c_scale,w_902.webp 902w,
+                            ../src/views/images/WeatherApp_pqwqwj/WeatherApp_pqwqwj_c_scale,w_1084.webp 1084w,
+                            ../src/views/images/WeatherApp_pqwqwj/WeatherApp_pqwqwj_c_scale,w_1152.webp 1152w,
+                            ../src/views/images/WeatherApp_pqwqwj/WeatherApp_pqwqwj_c_scale,w_1318.webp 1318w"
                             src="../src/views/images/WeatherApp_pqwqwj/WeatherApp_pqwqwj_c_scale,w_1318.webp" alt="">
                     </picture>
                 </div>
                 <div class="verticalLine" aria-hidden="true"></div>
                 <div class="description">
-                    <h3 class="tictactoe__paragraph" aria-hidden="true">Прогноз погоды</h3>
-                    <p class="tictactoe__paragraph" tabindex="0">Веб-страничка, которая позволяет получить прогноз
-                        погоды для какого-нибудь города.</p>
-                    <p class="tictactoe__paragraph" tabindex="0">В проекте применяется 2 API, одно для получения
-                        информации о погоде, другое для обновления фоновых изображений на странице.</p>
+                    <h3 class="name" aria-hidden="true">Прогноз погоды</h3>
+                    <section class="front__panel">
+                        <section class="info">
+                            <p class="paragraph" tabindex="0">Веб-страничка, которая позволяет получить прогноз
+                                погоды для какого-нибудь города.</p>
+                            <p class="paragraph" tabindex="0">В проекте применяется 2 API, одно для получения
+                                информации о погоде, другое для обновления фоновых изображений на странице.</p>
+                        </section>
+                    </section>
+                    <section class="back__panel">
+                        <section class="ghost__info">
+                            <p class="paragraph" tabindex="0">Веб-страничка, которая позволяет получить прогноз
+                                погоды для какого-нибудь города.</p>
+                            <p class="paragraph" tabindex="0">В проекте применяется 2 API, одно для получения
+                                информации о погоде, другое для обновления фоновых изображений на странице.</p>
+                        </section>
+                    </section>
                 </div>
             </section>
         </section>

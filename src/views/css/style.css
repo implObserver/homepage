@@ -10,7 +10,7 @@
 
 html {
     font-family: Roboto;
-    font-size: min(1.8vh, 1.8vw);
+    font-size: min(1.8vw, 1.8vh);
     color: #2f3640;
     line-height: 1.5em;
     padding: min(1vh, 1vw);
@@ -18,13 +18,18 @@ html {
     /* IE and Edge */
     scrollbar-width: none;
     /* Firefox */
-    
+
+    background-image: url(../images/white.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
 }
 
-/*html::-webkit-scrollbar {
+html::-webkit-scrollbar {
     visibility: hidden;
     width: 0;
-}*/
+}
 
 a {
     outline: none;
@@ -73,7 +78,7 @@ header {
 
 .logo {
     grid-area: logo;
-    font-size: min(6vh, 6vw);
+    font-size: min(6vw, 6vh);
     grid-template-columns: min-content min-content;
 }
 
@@ -86,10 +91,10 @@ header {
 .first__letter {
     position: relative;
     transform-style: preserve-3d;
-    animation: cubeRotate 10s linear infinite;
+    animation: letterRotate 10s linear infinite;
 }
 
-@keyframes cubeRotate {
+@keyframes letterRotate {
 
     0%,
     40% {
@@ -117,11 +122,6 @@ main {
         'about'
         'projects'
         'contacts';
-    background-image: url(../images/white.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
 }
 
 .hero {
@@ -131,7 +131,7 @@ main {
         'firstname'
         'secondname'
         'profession';
-    gap: min(12.5vh, 12.5vw);
+    gap: min(10vh, 10vw);
     overflow: hidden;
 }
 
@@ -157,7 +157,7 @@ main {
 
 .profession {
     font-size: min(4em);
-    text-indent: min(18vh, 18vw);
+    text-indent: min(24vh, 24vw);
 }
 
 .section__name {
@@ -165,11 +165,6 @@ main {
     width: max-content;
     padding-bottom: 1em;
     font-size: min(4.8vh, 4.8vw);
-}
-
-.about__paragraph {
-    display: grid;
-    min-width: 10px;
 }
 
 .about {
@@ -208,7 +203,7 @@ main {
 .gallery {
     display: grid;
     position: relative;
-    width: 500vw;
+    width: 100vw;
     right: min(17.5vh, 17.5vw);
 }
 
@@ -242,14 +237,17 @@ main {
 
 .project {
     display: grid;
-    border: min(1vh, 1vw) #2f3640 solid;
-    background-color: white;
-    padding: min(1vh, 1vw);
+    padding: min(3vh, 3vw);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
 }
 
 .preview {
     display: grid;
     width: min-content;
+    border: min(0.5vw, 0.5vw) #2f3640 solid;
 }
 
 img {
@@ -258,11 +256,55 @@ img {
 
 .description {
     display: grid;
+    grid-template-areas:
+        'title'
+        'panel';
+    padding: min(1vw, 1vh);
+    justify-self: start;
+    width: 100%;
+}
+
+.description>h3 {
+    position: relative;
+    grid-area: 'title';
+    margin: 0 0 0 min(1vh, 1vw);
+}
+
+.front__panel,
+.back__panel {
+    grid-area: panel;
+    position: relative;
+}
+
+.back__panel {
+    left: min(2vw, 2vh);
+    bottom: min(2vw, 2vh);
+    background-color: #2f3640a6;
+    border: min(0.5vw, 0.5vw) rgba(0, 0, 0, 0) solid;
+    color: rgba(0, 0, 0, 0);
+    z-index: -100;
+}
+
+.info,
+.ghost__info {
+    display: grid;
     padding: min(1vh, 1vw);
+    min-height: min(100px);
+}
+
+.info {
+    background-color: white;
+    border: min(0.5vw, 0.5vw) #2f3640 solid;
+}
+
+.name {
+    display: grid;
+    width: max-content;
+    padding: min(1vh, 1vw);
+    background-color: #f9f366;
 }
 
 .contacts {
-    border: 1px grey solid;
     opacity: 0;
 }
 
@@ -274,30 +316,43 @@ img {
     gap: 3rem;
 }
 
-.mail {}
-
-.github {}
-
 footer {
     display: grid;
     opacity: 0;
+    justify-items: center;
 }
 
 .verticalLine {
     display: grid;
 }
 
+.visible__section {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.show__hero {
+    transform: translate(0vw);
+    opacity: 1;
+    transition: transform 1s ease-in-out, opacity 1.6s ease-in-out;
+}
+
 @media screen and (min-aspect-ratio: 0.9/1) {
     .project {
         justify-content: space-between;
         align-items: center;
-        grid-template-columns: 1fr min-content 1fr;
+        grid-template-columns: max-content min-content 1fr;
     }
 
     .verticalLine {
         width: 1vh;
         height: 75%;
         border-right: 1px solid #2f3640;
+    }
+
+    .visible__main {
+        background-image: url(../images/WaveLineBackgroundFree.webp);
+        transition: background-image 1s ease-in-out;
     }
 }
 
@@ -320,25 +375,9 @@ footer {
         justify-self: center;
     }
 
-    .description {
-        display: grid;
-        padding: 1vw;
+    .visible__main {
+        background-image: url(../images/WaveLineBackgroundFree2.webp);
+        transition: background-image 1s ease-in-out;
     }
 
-}
-
-.visible__main {
-    background-image: url(../images/WaveLineBackgroundFree.webp);
-    transition: background-image 4s ease-in-out;
-}
-
-.visible__section {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.show__hero {
-    transform: translate(0vw);
-    opacity: 1;
-    transition: transform 1s ease-in-out, opacity 1.6s ease-in-out;
 }
