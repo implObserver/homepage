@@ -2,7 +2,8 @@ import './views/css/style.css';
 import { setEventListenersForCarousel } from './controllers/listeners/carousel';
 import { timeout } from './helper/helper';
 import { ScrollValues, Scroller } from './models/scroller';
-import { nodeObserver } from './models/observer';
+import { isVisible, setIntersectionObserver } from './models/observer';
+import { ProjectsSection, Section, scrollNode } from './models/DOMHandler';
 
 setEventListenersForCarousel();
 
@@ -17,7 +18,6 @@ const contacts = document.querySelector('.contacts');
 const footer = document.querySelector('footer');
 const frontPanels = document.querySelectorAll('.front__panel');
 const titles = document.querySelectorAll('.description>h3');
-
 
 document.querySelector('html').style.overflowY = 'hidden';
 await timeout(200);
@@ -40,19 +40,14 @@ contacts.classList.add('visible__section');
 await timeout(100);
 footer.classList.add('visible__section');
 
-let projectObserver = nodeObserver(projects);
-let descriptionScrollValues = ScrollValues(-40, 0);
+
+let descriptionScrollValues = ScrollValues(0, 40);
 
 let scrollers = [];
-
-frontPanels.forEach(frontPanel => {
-    let descriptionScroller = Scroller(frontPanel, descriptionScrollValues);
-    scrollers.push(descriptionScroller);
-})
-
-titles.forEach(title => {
-    let descriptionScroller = Scroller(title, descriptionScrollValues);
-    scrollers.push(descriptionScroller);
-})
+console.log(frontPanels.length)
+console.log(titles.length)
+for (let i = 0; i < frontPanels.length; i++) {
+    setIntersectionObserver(scrollNode(frontPanels[i], titles[i]))
+}
 
 console.log(titles)

@@ -262,10 +262,10 @@ img {
     padding: min(1vw, 1vh);
     justify-self: start;
     width: 100%;
+    transition: all 1s;
 }
 
 .description>h3 {
-    position: relative;
     grid-area: 'title';
     margin: 0 0 0 min(1vh, 1vw);
 }
@@ -273,12 +273,10 @@ img {
 .front__panel,
 .back__panel {
     grid-area: panel;
-    position: relative;
+   
 }
 
 .back__panel {
-    left: min(2vw, 2vh);
-    bottom: min(2vw, 2vh);
     background-color: #2f3640a6;
     border: min(0.5vw, 0.5vw) rgba(0, 0, 0, 0) solid;
     color: rgba(0, 0, 0, 0);
