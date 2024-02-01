@@ -40,14 +40,8 @@ contacts.classList.add('visible__section');
 await timeout(100);
 footer.classList.add('visible__section');
 
-
-let descriptionScrollValues = ScrollValues(0, 40);
-
-let scrollers = [];
-console.log(frontPanels.length)
-console.log(titles.length)
 for (let i = 0; i < frontPanels.length; i++) {
-    setIntersectionObserver(scrollNode(frontPanels[i], titles[i]))
+    let descriptionElements = { title: titles[i], panel: frontPanels[i], scrollValues: ScrollValues(-3, 3) };
+    setIntersectionObserver(Scroller(descriptionElements));
+    
 }
-
-console.log(titles)

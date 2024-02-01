@@ -1,15 +1,16 @@
-export const setIntersectionObserver = (e) => {
-    let observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
+import { timeout } from "../helper/helper"
+
+export const setIntersectionObserver = (scroller) => {
+    let observer = new IntersectionObserver(async entries => {
+        entries.forEach(async entry => {
             if (entry.isIntersecting) {
-                e.scroller1.start();
-                e.scroller2.start();
+                await timeout(100);
+                scroller.start();
             } else {
-                e.scroller1.stop();
-                e.scroller2.stop();
+                scroller.stop();
             }
         })
     })
 
-    observer.observe(e.node1)
+    observer.observe(scroller.getNode())
 }
