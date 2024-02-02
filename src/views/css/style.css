@@ -176,6 +176,7 @@ main {
     border: min(1vh, 1vw) #2f3640 solid;
     background-color: white;
     opacity: 0;
+    border-radius: 0.35rem;
 }
 
 .skills-panel {
@@ -252,6 +253,7 @@ main {
     display: grid;
     width: min-content;
     border: min(0.5vw, 0.5vw) #2f3640 solid;
+    border-radius: 0.35rem;
 }
 
 img {
@@ -270,17 +272,20 @@ img {
 
 .description>h3 {
     grid-area: 'title';
-    margin: 0 0 0 min(1vh, 1vw);
+    margin: 0 0 0 0.5rem;
+    border-radius: 0.35rem 0.35rem 0 0;
     transition: transform 0.5s ease-in-out;
 }
 
 .front__panel,
 .back__panel {
     grid-area: panel;
+    border-radius: 0.35rem;
 }
 
 .front__panel {
     transition: transform 0.5s ease-in-out;
+    z-index: 200;
 }
 
 .back__panel {
@@ -288,7 +293,6 @@ img {
     grid-template-areas: only-area;
     background-color: #2f3640a6;
     color: rgba(0, 0, 0, 0);
-    z-index: -100;
 }
 
 .live__app,
@@ -296,7 +300,41 @@ img {
     display: grid;
     grid-area: only-area;
     justify-self: end;
+    cursor: pointer;
+    z-index: 199;
+    background-color: rgb(250, 61, 61);
+    box-shadow: 0 0 min(1vh, 1vw) red;
+    height: 50%;
 }
+
+.live__app {
+    border-radius: 0.35rem 0.35rem 0 0;
+    transform: translateX(-0.35rem) translateY(0.35rem);
+}
+
+.live__app:hover,
+.repository:hover {
+   
+}
+
+.live__app:focus {
+    animation: clck 0.25s ease-in-out;
+}
+
+.live__app>div:hover {
+    
+}
+
+@keyframes clck {
+    50% {
+        transform: translateX(-0.35rem) translateY(1rem)
+    }
+
+    100% {
+        transform: translateX(-0.35rem) translateY(0.35rem)
+    }
+}
+
 
 .live__app>div {
     display: grid;
@@ -304,13 +342,14 @@ img {
 }
 
 .repository {
-    align-content: center;
     align-self: flex-end;
+    border-radius: 0 0 0.35rem 0.35rem;
+    transform: translateX(-0.35rem) translateY(-0.35rem);
 }
 
 .repository>div {
     display: grid;
-    align-content: center;
+    align-self: end;
     padding: 0.5rem;
 }
 
@@ -319,17 +358,18 @@ img {
     display: grid;
     padding: min(1vh, 1vw);
     min-height: min(100px);
-    border: min(0.5vw, 0.5vw) #2f3640 solid;
+    border-radius: 0.35rem;
 }
 
 .info {
     background-color: white;
     transition: transform 1s ease-in-out;
+    border: min(0.5vh, 0.5vw) #2f3640 solid;
 }
 
 .ghost__info {
     grid-area: only-area;
-    border: min(0.5vw, 0.5vw) rgba(0, 0, 0, 0) solid;
+    border: min(0.5vh, 0.5vw) rgba(0, 0, 0, 0) solid;
 }
 
 .name {
@@ -337,6 +377,7 @@ img {
     width: max-content;
     padding: min(1vh, 1vw);
     background-color: #f9f366;
+    box-shadow: 0 0 0.35rem #f9f366;
 }
 
 .contacts {
