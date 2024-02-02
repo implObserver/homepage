@@ -17,7 +17,6 @@ export const Scroller = (e) => {
     }
 
     const scroll = () => {
-        console.log('www')
         const scrollTopPosition = document.documentElement.scrollTop;
         if (oldScrollTopPosition > scrollTopPosition) {
             if (pixels < e.scrollValues.bottom) {
@@ -28,7 +27,6 @@ export const Scroller = (e) => {
                 pixels = -3;
             }
         }
-        console.log(node)
         e.title.style.transform = `translateY(${pixels}rem)`;
         e.panel.style.transform = `translateY(${pixels}rem)`;
         oldScrollTopPosition = scrollTopPosition;
@@ -49,4 +47,26 @@ export const Scroller = (e) => {
     }
 
     return { start, stop, getNode }
+}
+
+export const HeaderScroller = () => {
+    const node = document.querySelector('header');
+    let oldScrollTopPosition = 0;
+
+    const start = () => {
+        window.addEventListener('scroll', scroll);
+    }
+
+    const scroll = () => {
+        const scrollTopPosition = document.documentElement.scrollTop;
+        if (oldScrollTopPosition !== scrollTopPosition) {
+            node.classList.remove('unscrolled__header');
+            node.classList.add('scrolled__header');
+        } else {
+            node.classList.remove('scrolled__header');
+            node.classList.add('unscrolled__header');
+        }
+    }
+
+    return { start };
 }
