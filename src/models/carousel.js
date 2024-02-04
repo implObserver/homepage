@@ -1,5 +1,4 @@
-import { timeout } from "../helper/helper";
-import { leftTransition, removeTransitionLeftButton, removeTransitionRightButton, rightTransition, setTransitionLeftButton, setTransitionRightButton } from "../views/nodes/stylePresets/carousel";
+import { leftTransition, rightTransition } from "../views/nodes/stylePresets/carousel";
 
 export const Carousel = async () => {
     let wrapper = document.querySelector('.gallery');

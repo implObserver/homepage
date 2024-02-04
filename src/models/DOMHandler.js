@@ -1,5 +1,4 @@
 import { setIntersectionObserver } from "./observer";
-import { ScrollValues, Scroller } from "./scroller";
 
 export const Section = (node) => {
     const observer = setIntersectionObserver(node);
